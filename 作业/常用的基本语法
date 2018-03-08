@@ -1,0 +1,4 @@
+str.replace('被替换对象'，'替换对象')#将str中所有符合规定的选项全部替换，并返回替换后的字符串
+os.path.join('os.path.dirname(os.path.abspath(__file__))','传输文件的目录')#添加文件的路径
+os.path.basename('D:\\test\ab.png')#搜索路径末尾的文件名
+os.lisdir(path)#返回path路径下的文件以列表的形式

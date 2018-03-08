@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="127.0.0.1:8080/index" method="get">
+    <!--get用url返回，post用网络体发送-->
+    <!--<p>姓名：<input type="text" name="username"></p>-->
+    <p>密码：<input type="password"name="password"></p>
+
+    <!--name属性将内容以键值对的形式返给服务器-->
+    <!--提交数据给服务器-->
+    <p><input type="button" value="press"></p>
+    <p>体育：乒乓球<input type="checkbox"name="hobby" value="101"></p>
+    <p>体育：篮球<input type="checkbox" name="hobby" value="102"></p>
+    <!--checkbox提供复选框-->
+    <!--checkbox下value的值以列表的形式返回-->
+    <p>男<input type="radio" name="sex"></p>
+    <p>女<input type="radio" name="sex"></p>
+    <!--radio提供复选框-->
+    <!--name属性是给服务器看的-->
+    <!--radio下value的值只能选一个-->
+     <p>女<input type="file" ></p>
+    <p>女<input type="reset" ></p>
+    <!--reset重置页面-->
+        <select name="city" multiple size="5">
+        <optgroup label="河北">
+            <option value="天津">天津</option>
+        </optgroup>
+        <optgroup label="中国">
+            <option value="天津">天津</option>
+            <option value="北京">北京</option>
+            <option value="成都">成都</option>
+        </optgroup>
+    </select>
+    <textarea row="100" cols="100">自我简介</textarea>
+    <label for="www">姓名</label>
+    <input id="www" type="text">
+    <p><input type="submit" value="press"></p>
+</form>
+</body>
+</html>

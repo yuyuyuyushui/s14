@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            /*....*/
+        }
+        a{
+            text-decoration: none;
+            /*....*/
+        }
+        body{
+            font-family: "Times New Roman";
+            font-size: 12px;
+        }
+        /*head头部*/
+        .head-box{
+            background-color: #2459a2;
+            height: 40px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        .head-content{
+            /*background-color: red;*/
+            width: 1016px;
+            height: 40px;
+            line-height: 40px;
+            /*border: 2px solid red;*/
+            margin: 0 auto;
+            /*父类居中*/
+            position: relative;
+        }
+        .head-content .logo{
+            display: inline-block;
+            background: url("logo.png");
+            width: 121px;
+            height: 23px;
+            float: left;
+            margin-top: 11px;
+        }
+        .head-content .action-menu{
+            float: left;
+            margin-left: 5px;
+            /*border: 2px solid red;*/
+        }
+        .head-content .action-menu .tb{
+            display: inline-block;
+            /*background-color: white;*/
+            margin-left: -3px;
+            /*border: 1px solid;*/
+            padding: 0 5px 0 5px;
+            color: #b4b4b4;
+        }
+        .head-content .action-menu a.tb:hover{
+            color: white;
+            background-color: #396bb3;
+        }
+        .head-content .action-menu a.active, .head-content .action-menu a.active:hover{
+            color: white;
+            background-color: #204982;
+        }
+        .head-content .key-search{
+            /*display: inline-block;*/
+            float: right;
+            margin-top: 3px;
+        }
+        .key-search .search-txt{
+            display: inline-block;
+            float: left;
+            width: 91px;
+            height: 25px;
+            padding: 2px 2px 2px 5px;
+        }
+        .key-search a{
+            display: inline-block;
+            width: 31px;
+            height: 32px;
+            background-color: #f4f4f4;
+        }
+        .key-search a span.ico{
+            display: inline-block;
+            width: 11px;
+            height: 13px;
+            background: url("icon.png") no-repeat 0 -195px;
+            margin-left: 10px;
+        }
+        .action-nav{
+            position: absolute;/*子根据父的位置定位*/
+            right: 300px;
+        }
+        .action-nav a{
+            color: white;
+            margin: 0 5px;
+            padding: 0 20px;
+            line-height: 44px;
+        }
+        .action-nav a:hover{
+            background-color: gold;
+        }
+        /*----------------------------head-----------*/
+        .main-content-box{
+           background-color: lightgray;
+            padding-top: 44px;
+        }
+        .main-content{
+            background-color: white;
+            margin: 0 auto;
+            width: 1016px;
+            height: auto!important;/*自适应*/
+            min-height: 700px;/*设置高度*/
+            overflow: hidden;/*多余部分隐藏起来*/
+        }
+        .main-content .content-L{
+            float: left;
+            width: 630px;
+            margin-top: 10px;
+            margin-left: 5px;
+        }
+        .content-L .top-area{
+            /*padding-top: ;*/
+            border-bottom: 1px solid #b4b4b4;
+        }
+        .top-area .child-nav{
+            float: left;
+        }
+        .top-area .child-nav a{
+            display: inline-block;
+            width: 60px;
+            height: 26px;
+            line-height: 26px;
+            color: #369;
+            text-align: center;
+        }
+        .top-area .child-nav .active{
+            background: url("tip.png")no-repeat 0 -299px;
+        }
+        .sort-nav{
+            float: left;
+            margin-left: 120px;
+            margin-top: 7px;
+        }
+        .sort-nav a{
+            display: inline-block;
+            text-align: center;
+            color: #390;
+            margin-left: 10px;
+        }
+        .sort-nav .active{
+            color: #b4b4b4;
+        }
+        .publish{
+            display: inline-block;
+            width: 136px;
+            height: 32px;
+            background-color: #84a42b;
+            float: right;
+            color: white;
+            font-size: 16px;
+            text-align: center;
+            line-height: 32px;
+        }
+        .content-list .item{
+            border-bottom: 1px solid #b4b4b4;
+            padding-top: 10px;
+        }
+        .content-list .item .new-picture{
+            float: right;
+        }
+        .content-list .item .part1{
+            line-height: 20px;
+        }
+        .content-list .item .part1:hover a.show-content{
+            text-decoration: underline;
+        }
+        .content-list .item .part2{
+            padding: 10px 0;
+            color: #99ceab;
+        }
+
+
+
+
+
+        .main-content .content-R{
+            float: left;
+        }
+        .main-content .foot-box{
+            clear: left;/*清除两边文本流*/
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="head-box">
+        <div class="head-content">
+            <a href="#" class="logo"></a>
+            <div class="action-menu">
+                <a href="#" class="tb active">全部</a>
+                <a href="#" class="tb">42区</a>
+                <a href="#" class="tb">段子</a>
+                <a href="#" class="tb">图片</a>
+                <a href="#" class="tb">挨踢1024</a>
+                <a href="#" class="tb">你问我答</a>
+            </div>
+            <div class="key-search">
+                <form action="/" method="post">
+                    <input type="text" class="search-txt">
+                    <a href="#" class="i">
+                        <span class="ico"></span>
+                    </a>
+                </form>
+            </div>
+            <div class="action-nav">
+                <a href="#" class="register-btn">注册</a>
+                <a href="#" class="login-btn">登陆</a>
+            </div>
+        </div>
+    </div>
+    <div class="main-content-box">
+        <div class="main-content">
+            <div class="content-L">
+                <div class="top-area"><!--顶分三个区域-->
+                    <div class="child-nav">
+                        <a href="#" class="hotbtn active">最热</a>
+                        <a href="#" class="newbtn">最新</a>
+                        <a href="#" class="personbtn">人类发布</a>
+                    </div>
+                    <div class="sort-nav">
+                        <a href="#" class="sortbtn active">即使排序</a>
+                        <a href="#" class="newbtn">24小时</a>
+                        <a href="#" class="newbtn">3天</a>
+                    </div>
+                    <a href='#' class="publish">
+                        <span class="n2">+&nbsp;&nbsp;发布</span>
+                    </a>
+                </div>
+                <div class="content-list">
+                    <div class="item">
+                        <div class="new-picture"></div>
+                        <div class="new-content">
+                            <div class="part1">
+                                <a href="#" class="show-content" target="_blank">
+
+                                </a>
+                                <span class="content-source">-ww4.sinaimg.cn</span>
+                                <a href="#" class="n2">
+                                    <span class="content-kind">42区</span>
+                                </a>
+                            </div>
+                            <div class="part2">
+                                <a href="#" class="recommend" title="推荐">
+                                    <span class="hand-icon icon-recommend"></span>
+                                    <b>4</b>
+                                </a>
+                                <a href="javascript:;"class="discuss">
+                                    <span class="hand-icon icon-discuss"></span>
+                                    <b>5</b>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-R"></div>
+            <div class="foot-box"></div>
+        </div>
+    </div>
+</body>
+</html>
