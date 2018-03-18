@@ -7,7 +7,7 @@ from config import settings
 from src import identifier
 
 
-class BaseModel:
+class BaseModel:  # 父类不定义实例变量，共用子类实例变量
     def save(self):
         """
         使用pickle将用户对象保存到文件
@@ -15,7 +15,7 @@ class BaseModel:
         """
         nid = str(self.nid)
         file_path = os.path.join(self.db_path, nid)
-        pickle.dump(self, open(file_path, 'wb'))
+        pickle.dump(self, open(file_path, 'wb'))#把对象封装在文件里
 
 # obj = Admin('root', 123)
 # 将obj写入到db/admin目录
@@ -31,7 +31,7 @@ class Admin(BaseModel):
         """
         # nid唯一ID，随机字符串
         #
-        self.nid = identifier.AdminNid(Admin.db_path)
+        self.nid = identifier.AdminNid(Admin.db_path)  # 实例化对象时，返回__str()__函数
         self.username = username
         self.password = password
         self.create_time = time.strftime('%Y-%m-%d')
