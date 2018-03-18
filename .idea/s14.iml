@@ -7,9 +7,11 @@
       <sourceFolder url="file://$MODULE_DIR$/作业/school_system" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/作业/Jaime" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/作业/system" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.6 (s14)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.6 (venv)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="test" />
   </component>
   <component name="TestRunnerService">
     <option name="PROJECT_TEST_RUNNER" value="Unittests" />

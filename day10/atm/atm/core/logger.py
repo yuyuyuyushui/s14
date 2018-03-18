@@ -42,5 +42,6 @@ def logger(log_type):
     logger.info('info message')
     logger.warn('warn message')
     logger.error('error message')
-    logger.critical('critical message')'''
+    logger.critical('critical message')
+    '''
 
