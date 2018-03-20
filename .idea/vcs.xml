@@ -4,6 +4,7 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/shopping" vcs="Git" />
     <mapping directory="D:/test" vcs="Git" />
+    <mapping directory="D:\s14\automatic_test" vcs="Git" />
     <mapping directory="D:\s14\server" vcs="Git" />
   </component>
 </project>
