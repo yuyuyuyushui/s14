@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <style>
+        #id1{
+            width: 200px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<input type="text" id="id1" onclick="begin()">
+<button onclick="end()">停止</button>
+
+<script>
+    function showTime() {
+        var current_time = new Date().toLocaleString();
+        var ele = document.getElementById('id1'); //拿到'id'这个标签对象
+        ele.value = current_time //取标前对象的值
+    }
+    var clock;
+    function begin() {
+        showTime();
+        clock = setInterval(showTime, 1000)
+    }
+    function end() {
+        clearImmediate(clock)
+    }
+</script>
+</body>
+</html>

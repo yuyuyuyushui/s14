@@ -1,4 +1,4 @@
-import multiprocessing, shutil, uuid, time
+import multiprocessing, shutil, uuid, time, sys, logging
 def func(date_base,num):
     for i in range(num):
         shutil.copyfile(date_base, r'F:\人脸库\曹秀英_511002196310130363'+str(uuid.uuid1())+'.bmp')

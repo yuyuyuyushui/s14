@@ -10,11 +10,11 @@ mysql_info ={
 }
 class MysqlUtil:
     def __init__(self):
-        self.db_info = mysql_info
         self.conn = self.__getConnect()
-    def __getConnect(self):# 封装数据库的连接
+    @staticmethod
+    def __getConnect():# 封装数据库的连接
         try:
-            conn = pymysql.connect(self.db_info)
+            conn = pymysql.connect(mysql_info)
             return conn
         except Exception as e:
             print("数据库连接异常：%s" %e)
@@ -43,3 +43,4 @@ class MysqlUtil:
             rows = curs.fechall()
             curs.close()
             return rows
+obj = MysqlUtil().conn
