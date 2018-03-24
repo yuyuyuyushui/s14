@@ -2,9 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<div class="div1">
+    <button onclick="add()">add</button>
+    hello div1
+</div>
+<div class="div2">
+     <button onclick="del()">del</button>
+    hello div2</div>
+<div class="div3">
+    <button onclick="change()">change</button>
+    hello div3
+</div>
+<div class="div4">hello div4</div>
+;
+<script>
+    function add(){
+        ele = document.createElement("p");
+        ele.innerHTML="<h1>hello p</h1>>";
+        ele.style.color='red';
+        ele.style.fontSize = '10px';
+
+
+        var father = document.getElementsByClassName('div1')[0];//父节点调用
+        // console.log(document.getElementsByClassName('div1'));
+        father.append(ele)//父节点下添加
+    }
+    function del() {
+        var father = document.getElementsByClassName("div1")[0];//父节点调用
+        var son = father.getElementsByTagName("p")[0];//父节点下删除
+        father.removeChild(son)
+    }
+    function change() {
+        var img = document.createElement('img');//创建元素
+        img.src = 'kk.jpg';
+
+        var ele = document.getElementsByTagName("p")[0];//获取标签
+        var father = document.getElementsByClassName('div3')[0];//获取标签为div3
+
+        father.replaceChild(img, ele)
+    }
+</script>
 </body>
 </html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<select id="province">
+    <option value="">请选择省份</option>
+</select>
+<select name="" id="citys">
+    <option value="">请选择城市</option>
+</select>
+<script>
+    data={"江苏省":["南京","盐城"],"四川":["绵阳","成都"],"陕西":['西安','宝鸡']};
+    var pro_ele = document.getElementById('province');//获取标签对象
+    var city_ele = document.getElementById("citys");
+    for(var i in data){
+        var ele = document.createElement('option');//创建option标签
+        ele.innerHTML=i;
+        pro_ele.appendChild(ele)
+        }
+    // console.log(pro_ele);
+    pro_ele.onchange=function () {//创建触发函数
+        console.log(this.selectedIndex);
+        console.log(data[this.options[this.selectedIndex].innerHTML]);//this是pro_ele,this.selectedIndex是其序号，innerHTML是标签值
+
+        var citys =data[this.options[this.selectedIndex].innerHTML];
+        city_ele.options.length = 1;
+        for(var i=0; i<citys.length;i++){
+            // console.log(citys[i]);
+
+            var ele1=document.createElement('option');
+            ele1.innerHTML=citys[i];
+            city_ele.appendChild(ele1)
+        }
+
+
+    };
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="outer">
+    outer
+    <div class="inner">
+        inner
+        <p>inner p</p>
+    </div>
+    <p>aaa</p>
+</div>
+<ul>
+    <li>1111</li>
+    <li>2222</li>
+    <li>3333</li>
+    <li>4444</li>
+    <li>1111</li>
+    <li>1111</li>
+</ul>
+<input type="text">
+<input type="checkbox">
+<input type="submit">
+<script src="jquery-3.3.1.js"></script>
+<script>
+    // $("li").eq(0).css('color','red');//基本查找方式
+    //查找筛选器
+    // $(".outer").children('p').css("color",'red');//查找子标签
+    //$(".outer").find('p').css("color",'red');//查找所有标签
+    //console.log($(".outer .inner p").parent().html())//查找标签的html内容
+    $(".outer").siblings().css("color","red")//除.outer以外的所有标签
+</script>
+</body>
+</html>

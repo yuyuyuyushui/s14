@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<!--<div id="div1">-->
+
+    <!--<div class="div2">i am div2</div>-->
+    <!--<div name="yuan">i am div2</div>-->
+    <!--<div id="div3">i am div2</div>-->
+    <!--<p>hello p</p>-->
+<!--</div>-->
+<form action="" id="forml">
+    <input type="text" name="username">
+    <input type="submit" value="提交">//先执行提交
+</form>
+
+<script>
+
+   var ele=document.getElementById("forml");
+       ele.onsubmit = function (e) { //提交前的比对
+           // console.log(ele);
+           alert(1234);
+        e.preventDefault()//e是事件，
+       }
+</script>
 </body>
 </html>
